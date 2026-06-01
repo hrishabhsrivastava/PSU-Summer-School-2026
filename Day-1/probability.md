@@ -79,3 +79,67 @@ $$
 $$
 P(A) = \frac{|A|}{|\Omega|}=\frac{|A|}{m}
 $$
+
+## Conditional Probability
+- For events $A$ and $B$, the probability that $A$ occurs given that $B$ occurs is called the conditional probability of $A$ given $B$ and is written as $P(A|B)$.
+- **Independent events:** If $A$ and $B$ are independent, $P(A|B) = P(A)$
+
+$$
+P(A|B) = \frac{P(A\cap B)}{P(B)}
+$$
+
+- In other words, we are in the sample space of $B$. Hence, we scale everything by $P(B)$.
+
+### Multiplicative law of conditional probability
+
+$$
+P(A\cap B) = P(A|B)P(B)
+$$
+
+### Birthday Problem
+
+What is the probability that, in a group of $n$ people, there is at least one pair of matching birth dates?
+
+_ Assuming independent birthdays,
+
+$$
+P = 1 - \frac{365}{365}\times\frac{364}{365}\times\frac{363}{365}...n\text{ terms}
+$$
+
+- This can also be written as,
+
+$$
+P(A_1^c)\times P(A_2^c|A_1^c)\times P(A_3^c | A_1^c,A_2^c)\times ...
+$$
+
+where, $A_i$ refers to the matching birthdays for $i$ people.
+
+### Partitioning the sample space
+- It means creating a set of non-overlapping events, such that their union gives the whole sample space.
+- Let $B_1,...,B_k$ be a partition of a sample space $\Omega$ and let $A$ be an arbitrary event.
+
+$$
+P(A) = P(A\cap B_1) + ... + P(A\cap B_k)
+$$
+
+This is called the **Law of Total Probability**
+
+**Doubt:** Why isn't the probability of getting Heads in the example of the Law of Total Probability equal to 7/12, i.e., $\frac{n_H}{N_H+n_T}$
+
+### Bayes' Theorem
+
+$$
+P(B_i | A) = \frac{P(A|B_i)P(B_i)}{P(A)} = \frac{P(A|B_i)P(B_i)}{\sum_{j=1}^m P(A|B_j)P(B_j)}
+$$
+
+- Named after Thomas Bayes.
+- Some paradoxes: Monty Hall problem, Three-card problem, 
+
+### Independence
+
+$$
+P(A\cap B) = P(A)P(B)
+$$
+
+- This isn't trivially defined for more than two events.
+- We define 'mutually independent' events. 
