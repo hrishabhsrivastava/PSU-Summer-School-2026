@@ -72,6 +72,7 @@ $$
 - This can be generalized to any number of events, $n$.
 
 - When $\Omega$ has $m$ equally likely outcomes,
+
 $$
 P(A) = \frac{|A|}{|\Omega|}=\frac{|A|}{m}
 $$
