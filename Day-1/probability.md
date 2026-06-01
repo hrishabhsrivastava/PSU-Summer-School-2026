@@ -200,7 +200,7 @@ $$
 P(Y=y) = \frac{\lambda^y}{y!}e^{-\lambda}
 $$
 
-- Here $E(Y)=\lambda$ and Var$(X)=\lambda$
+- Here $E(Y)=\lambda$ and Var $(X)=\lambda$
 
 - A Binomial RV with very high $n$ and very low $p$, can be modelled as a Poisson RV with $\lambda=np$
 
@@ -208,23 +208,23 @@ $$
 
 ### Geometric RV
 
-- The goal is counting failues before first success.
+- The goal is counting failures before the first success.
 - Consider independent trials where the probability of success is $p$. Let $X$ denotes the number of failures before the first success.
 
 $$
 P(X=x) = (1-p)^xp
 $$ 
 
-- It has $E(X)=\frac{q}{p}$ and Var$(X)=\frac{q}{p^2}$ where $q=1-p$.
+- It has $E(X)=\frac{q}{p}$ and Var $(X)=\frac{q}{p^2}$ where $q=1-p$.
 
 ### Negative Binomial RV
 
 - Number of failures before $r$th success.
 
 $$
-P(X=x) = ({r+x-1}\choose x)(1-p)^x p^r
+P(X=x) = {r+x-1\choose x}(1-p)^x p^r
 $$
 
-- It has $E(X)=\frac{rq}{p}$ and Var$(X)=\frac{rq}{p^2}$
+- It has $E(X)=\frac{rq}{p}$ and Var $(X)=\frac{rq}{p^2}$
 
 - Negative binomial is used to model count data more often, because it doesn't have the constraints of Poisson.
