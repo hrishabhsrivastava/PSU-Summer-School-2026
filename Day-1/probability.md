@@ -142,4 +142,51 @@ P(A\cap B) = P(A)P(B)
 $$
 
 - This isn't trivially defined for more than two events.
-- We define 'mutually independent' events. 
+- We define 'mutually independent' events.
+
+## Discrete random variables
+
+### Expectation of a R.V.
+- Expectation is a weighted average
+
+$$
+\mu = E(X) = \sum_{i=1}^n P(X=x_i)
+$$
+
+- If $Y=g(X)$, i.e., a new RV which is a function of the original RV,
+
+$$
+E(Y) = E[g(X)] = \sum_{i=1}^n g(x_i)P(X=x_i)
+$$
+
+### Variance of a RV
+
+$$
+\sigma^2 = {\rm Var}(X) = E[(X-\mu)^2]
+$$
+
+- Expectation is a linear operator
+
+$$
+E(aX + bY) = aE(X) + bE(Y)
+$$
+
+- Using Cauchy-Schwartz inequality, which states that the expectation of the square must be greater than the square of the expectation, we can show
+
+$$
+E[(X-\mu)^2] = E(X^2) - \mu^2
+$$
+
+- Variance conveys the spread of the random variable around its mean.
+
+**Doubt:** How is the square of the random variable constant in the example on variance measures speed?
+
+- Not all random variables has an expectation, like for example, a Cauchy Distribution.
+
+### Binomial RV
+- Consider $n$ independent trials where the probability of "success" in each trial is $p\in (0,1)$. Let $x$ denotes the totla number of successes,
+
+$$
+P(X=x) = {n\choose x} p^x(1-p)^{n-x}
+$$
+
