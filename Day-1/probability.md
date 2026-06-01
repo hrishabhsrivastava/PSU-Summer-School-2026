@@ -190,3 +190,41 @@ $$
 P(X=x) = {n\choose x} p^x(1-p)^{n-x}
 $$
 
+- The expectation $E(X)=np$ and the variance ${\rm Var}(X)=np(1-p)$
+- For independent random variables, the variance of the sum is the sum of the variance.
+
+### Poisson RV
+- Consider a random variable $Y$, such that for some $\lambda>0$
+
+$$
+P(Y=y) = \frac{\lambda^y}{y!}e^{-\lambda}
+$$
+
+- Here $E(Y)=\lambda$ and Var$(X)=\lambda$
+
+- A Binomial RV with very high $n$ and very low $p$, can be modelled as a Poisson RV with $\lambda=np$
+
+- The Poisson has this constraint that mean and variance should always be the same. Don't use Poisson, if it isn't!
+
+### Geometric RV
+
+- The goal is counting failues before first success.
+- Consider independent trials where the probability of success is $p$. Let $X$ denotes the number of failures before the first success.
+
+$$
+P(X=x) = (1-p)^xp
+$$ 
+
+- It has $E(X)=\frac{q}{p}$ and Var$(X)=\frac{q}{p^2}$ where $q=1-p$.
+
+### Negative Binomial RV
+
+- Number of failures before $r$th success.
+
+$$
+P(X=x) = ({r+x-1}\choose x)(1-p)^x p^r
+$$
+
+- It has $E(X)=\frac{rq}{p}$ and Var$(X)=\frac{rq}{p^2}$
+
+- Negative binomial is used to model count data more often, because it doesn't have the constraints of Poisson.
