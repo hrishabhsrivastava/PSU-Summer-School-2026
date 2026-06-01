@@ -57,3 +57,9 @@
 **Textbook:** Modern Statistical Methods for Astronomy (by Fiegelson and Babu)
 
 - Modern cosmology requires a whole lot of statistical methods, like for example strong lensing needs the knowledge of shape statistics.
+
+**Astroinformatics:** To treat massive data streams and databases. It involves perforfming computationally intensive astronomy and might require parallel computing.
+
+ `Statistics guides the sicentist on what to compute. Informatics helps the scientist perform the computation.`
+
+
