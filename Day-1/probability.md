@@ -45,6 +45,7 @@
 
 ### Disjoint events
 - Probability of unions = sum of probabilities. For disjoin events $A$ and $B$,
+
 $$
 P(A\cup B) = = P(A) + P(B)
 $$
@@ -57,6 +58,7 @@ It is a function that summarizes the possible non-zero values of $P(X=x)$, also 
 1. $P(A)\geq 0$ (Non-negativity)
 2. If $A$ is the whole sample space $\Omega$, then $P(A)=1$
 3. If $A_1, A_2, ...$ are mutually exclusive (i.e., disjoint), then,
+
 $$
 P(\bigcup_{i=1}^\infty A_i) = \Sum_{i=1}^{\infty} P(A_i)
 $$
@@ -65,6 +67,7 @@ $$
 
 ### Inclusion-Exclusion Rule
 - For two events $A$ and $B$
+
 $$
 P(A\cup B) = P(A) + P(B) - P(A\cap B)
 $$
