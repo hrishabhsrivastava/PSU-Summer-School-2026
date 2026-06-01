@@ -100,7 +100,7 @@ $$
 1. **Statistical hypothesis:** A statement about parameters(s) $\theta$ of a pdf
 2. **Null vs alternative:** The null hypothesis represents the default case, and the alternative represents what the researcher wants to argue.
 3. **Test statistic:** Let $T=h(X_1, X_2, .., X_n)$ be a function of the data to be used to determine which hypothesis is supported more by the data. Then we call it a test statistic.
-4. **Significance level:** The same $\alpha$ used in confidence interval. A test with significance level of $\alpha0.05$ means that the test controls the probability of rejecting H_0 when it is the case, i.e., P(reject $\theta_0$|$\theta_0$ is the case), to be smaller than or equal to 0.05.
+4. **Significance level:** The same $\alpha$ used in confidence interval. A test with significance level of $\alpha0.05$ means that the test controls the probability of rejecting H_0 when it is the case, i.e., P(reject $\theta_0$| $\theta_0$ is the case), to be smaller than or equal to 0.05.
 
 ### Principle in hypothesis testing
 - We assume that the null hypothesis is true.
