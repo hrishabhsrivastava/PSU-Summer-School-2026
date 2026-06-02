@@ -59,11 +59,13 @@ $$
 ### Correlation Coefficient
 - The Pearson correlation coefficient tells the relation betwwen two variables.
 - **Covariance:**
+
 $$
 {\rm Cov}(X, Y) = \sum_{i=1}^n (X_i - bar{X})(Y_i - \bar{Y})/(n-1)
 $$
 
 - **Correlation:**
+
 $$
 r_{xy} = {\rm Cov}(X, Y)/s_xs_y
 $$
