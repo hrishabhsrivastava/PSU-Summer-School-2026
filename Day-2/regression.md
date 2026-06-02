@@ -39,7 +39,7 @@ $$
 \sum_{i=1}^n (Y_i - (\beta_0 + \beta_1X_i))^2
 $$
 
-    - Least squares regression minimizes the residuals
+- Least squares regression minimizes the residuals
 
 - **Optimization**: We need a method which is computationally efficient and accurate.
     - Possibilities: 1. Random guess
@@ -47,12 +47,13 @@ $$
                     3. Solve analytically
 
     - We find a global minimum analytically:
+
 $$
-\hat{beta}_1 = \frac{\sum_{i=1}^n (X_i - \bar{X})(Y_i - \bar{Y})}{\sum_{i=1}^n (X_i - \bar{X})^2}
+\hat{\beta}_1 = \frac{\sum_{i=1}^n (X_i - \bar{X})(Y_i - \bar{Y})}{\sum_{i=1}^n (X_i - \bar{X})^2}
 $$
 
 $$
-\hat{beta}_0 = \bar{Y} - \hat{\beta}_1\bar{X} 
+\hat{\beta}_0 = \bar{Y} - \hat{\beta}_1\bar{X} 
 $$
 
 ### Correlation Coefficient
