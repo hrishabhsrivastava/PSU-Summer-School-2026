@@ -14,12 +14,12 @@
 Learning structures in our data.
 
 ### Dimensionality Reduction
-- Reducing the amount of information we need to caputre this dataset
+- Reducing the amount of information we need to capture this dataset
 - The idea to represent the same data in a latent space - it doesn't have to be physical.
 
 **What can we do in a low-dimensional space?**
 1. Better feature selection for classification: might notice clustering
-2. Anomaly detection: might find an data point in a region it's not supposed to be at
+2. Anomaly detection: might find a data point in a region it's not supposed to be in
 3. Data simulation
 4. Physical interpretability: a little rare
 
@@ -35,32 +35,32 @@ Learning structures in our data.
 3. Project the data onto each basis, tracking the weights
 
 **Power Iteration Method**
-It can be computationally expensive to find every eigenvector if our data-space is high dimensional. We follow the following algorithm instead:
+It can be computationally expensive to find every eigenvector if our data space is high-dimensional. We follow the following algorithm instead:
 1. Given $M=X^TX$, select a random vector $v_0$
 2. For $i=1, 2, 3, ...$, let $v_i=M_iv_0$
 3. If $v_i/|v_i|\sim v_{i-1}/|v_{i-1}|$, then $v_i/|v_i|$ is our first component.
 4. If not, repeat steps 1-3 until the condition is met.
-5. Project the data orthogonally to $w_1$. Repeat the procedure to fing the next PCA component and so on.
+5. Project the data orthogonally to $w_1$. Repeat the procedure to find the next PCA component and so on.
 
-- Note that PCA can remove structures in our data, if it doesn't lie along the the principal components.
+- Note that PCA can remove structures in our data if it doesn't lie along the principal components.
 
 #### t-SNE
 
 - It refers to t-distributed stochastic neighbor embedding.
 
 **Neighbor embedding**
-- It refers to actually identifying the neighbours in the original high dimensional space.
+- It refers to actually identifying the neighbors in the original high-dimensional space.
 - Neighbourhood can be calculated using Euclidean distances
 
 $$
 p_{i|j} \propto \exp(-\frac{||x_i-x_j||^2}{2\sigma_j^2})
 $$  
 
-- t-SNE aims to learn an embedding which preseves distance measures in latent space.
+- t-SNE aims to learn an embedding which preserves distance measures in latent space.
 - It uses a Student $t$-distribution
-- Measure $p(x_i|x_j)$ in the observed space, which is Gaussian and $q(x_i^'|x_j^')$ in latent space, which is the Student's $t$ distribution. (WHY?)
+- Measure $p(x_i|x_j)$ in the observed space, which is Gaussian and $q(x_i'|x_j')$ in latent space, which is the Student's $t$ distribution. (WHY?)
 - Use KL Divergence to minimize the pdfs $p$ and $q$
-- It's stochastic because we start with choosing random points.
+- It's stochastic because we start by choosing random points.
 
 **Perplexity:** It is a hyperparameter, which means the number of points in a cluster.
 
@@ -82,7 +82,7 @@ $$
 w_{i,k} = \frac{\alpha_kp_k(x_i|\mu_k, \sigma_k)}{\sum_{m=1}^K \alpha_kp_m(x_i|\mu_m, \sigma_m)}
 $$
 
-- This idea can be easily extended to hgigher dimensions.
+- This idea can be easily extended to higher dimensions.
 
 **Objective function:** Log-likelihood
 
@@ -95,7 +95,7 @@ $$
 - We use Expectation-Maximization
 
 **Expectation Maximization (EM) Algorithm**
-1. Choose a random set of parameter values ($\theta$) whcih satisfies our constraints
+1. Choose a random set of parameter values ($\theta$) that satisfies our constraints
 2. **E-Step:** Compute the probability matrix: the probability of each point belonging to each cluster ($w_{ik}$'s)
 3. **M_Step:** Calculate new parameter values - 
 
@@ -122,18 +122,18 @@ $$
 - **Model:** $\Theta={\mu_1, mu_2,...,\mu_k}$
 - **Objective:** $\sum_{i=1}^N\min_{c_k\in C}(||x_i-\mu_k||^2)$
 - **Optimization:** Using EM
-    - Choosen random cluster centers
+    - Chosen random cluster centers
     - E-step: calculate distances from the cluster centers
     - M-step: assign the least distant cluster as home, then re-calculate the cluster center.
     - Repeat the steps until convergence.
 
 ## Supervised Learning
-- I know the answers for a training set and I want to train an algorithm to give me the same quantity for an unseen sample.
+- I know the answers for a training set, and I want to train an algorithm to give me the same quantity for an unseen sample.
 
 ### Classification: Support Vector Machine
 
 - The goal is to find a decision boundary (a line or a hyperplane) for different classes in the parameter space.
-- Ideally, I need three points to define two parallel planes which separte the classes. These are called as **Support Vectors**.
+- Ideally, I need three points to define two parallel planes which separte the classes. These are called **Support Vectors**.
 - Mathematically, we can define the perpendicular plane to the street and the distance along this vector.
 
 $$
@@ -149,18 +149,18 @@ $$
 **Important for the objective function**
 1. Should only depend on the support vectors
 2. Should be differentiable (thus, we can use gradient descent)
-3. The objective should only depend upon the dot product between pairs of support vector.
+3. The objective should only depend upon the dot product between pairs of support vectors.
 
 **Non-linear decision boundary**
 - We change the parameter space mathematically to some $\Phi(x_i)$, in order for the decision boundary to become linear again.
-- We don't need to find the whole $\Phi(x)$ again, since decision boundary only depends upon support vectors.
-- We, thus define a Kernel function,
+- We don't need to find the whole $\Phi(x)$ again, since the decision boundary only depends upon the support vectors.
+- We thus define a Kernel function,
 
 $$
 K(x_i, x_j) = \phi(x_i)\cdot\phi(x_j)
 $$
 
-- One example of Kernel function is the Gaussian Kernel,
+- One example of a kernel function is the Gaussian Kernel,
 
 $$
 K(x_i, x_j)= \exp(-\frac{||x_i-x_j||^2}{2\sigma^2})
@@ -173,10 +173,10 @@ $$
 - Nodes: Junctions in a tree
 - Leaves: Represents the final outcome
 
-**Random Forest:** Combines a series of decision tree to determine the final outcome.
+**Random Forest:** Combines a series of decision trees to determine the final outcome.
 
 #### Model
-- A series of set of decision trees which attempt to classify a set of objects, i.e., a random forest
+- A series of sets of decision trees which attempt to classify a set of objects, i.e., a random forest
 
 #### Objective
 - **Gini Impurity:** Used to choose a decision boundary
