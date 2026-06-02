@@ -228,3 +228,97 @@ $$
 - It has $E(X)=\frac{rq}{p}$ and Var $(X)=\frac{rq}{p^2}$
 
 - Negative binomial is used to model count data more often, because it doesn't have the constraints of Poisson.
+
+## Continuous distributions
+
+### Technical issues
+- If $\Omega$ is uncountably infinite, the previous definition of the random variable won't work.
+- **Definition:** A function $X:\Omega\to\matbb{R}$ is said to be a random variable iff for all real numbers $a$, the set {\omega\in\Omega: X(\omega)\leq a} is an event.
+
+### Beyond discreetness
+
+- The cumulative distribution function $F(x)$ is defined as,
+
+$$
+F(x) = P(X\leq x)
+$$
+
+- The probability density function $f$ is defined as,
+
+$$
+F(x) = \int_{-\infty}^x f(t)\,dt
+$$
+
+- $\lim_{X\to-\infty}F(x)=0$ and $\lim_{X\to\infty}F(x)=1$
+- Note that while CDF is uniquely defined, the same isn't true for PDFs. One CDF can have multiple possible PDFs.
+
+### Exponential R.V
+
+- It is the continuous version of geometric.
+- Let $\lambda>0$ be some positive parameter. The exponential distribution with mean $1/\lambda$ has density
+
+$$
+f(x) = 
+\begin{cases}
+
+\lambda\exp(-\lambda x) & \text{if } x \geq 0 \\
+0 & \text{if } x < 0
+
+\end{cases}
+
+$$
+
+- The CDF would look like,
+
+$$
+F(x) = \int_{-\infty}^x f(t)\,dt
+\begin{cases}
+1-\exp(-\lambda x) & \text{if } x>0 \\
+0 & \text{otherwise}
+\end{cases}
+$$
+
+### The Normal Distribution
+
+$$
+f(x) = \varphi_{\mu,\sigma^2} = \frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{(x-\mu^2)}{2\sigma^2})
+$$
+
+- The CDF is represented by $\Phi$
+
+### The Lognormal Distribution
+
+- If $X\sim\mathbb{N}$, then $\exp(X)$ has a lognormal distribution with parameters $\mu$ and $\sigma^2$.
+
+$$
+f(x) = \frac{1}{x\sigma\sqrt{2\pi}}\exp(-\frac{(\ln(x)-\mu^2)}{2\sigma^2})
+$$
+
+- Only for $x>0$
+- Used when parameters are in the multiplicative scales.
+
+### Expectation
+- For a random variable $X$ with density $f$, the expectation value of $g(X)$ will be
+
+$$
+E[g(X)] = \int_{-\infty}^\infty g(x)f(x)\,dx
+$$
+
+- The variance of $X$ is given by,
+
+$$
+\sigma^2 = E[(X-\mu)^2] = \int_{-\infty}^\infty (x-\mu)^2f(x)\,dx = \int_{-\infty}^\infty x^2f(x)\,dx - \mu^2
+$$
+
+- For a lognormal distribution,
+$$
+E(X) = e^{\mu + (\sigma^2/2)}
+$$
+
+- Note that variance isn't a linear operator.
+
+## Limit Theorems
+
+- Behaviour of sums as $n\to\infty$.
+- **IID**: If the experiment never changes and the result of one experiment no not influence the results of any other, this sequence of experiments is called independent and identically distributed.
+- For a large number of samples, as the sample size increases, the sample mean exhibits a normal distribution.
