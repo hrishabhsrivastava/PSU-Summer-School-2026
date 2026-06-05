@@ -1,0 +1,115 @@
+2026-06-02 17:04:35 From Tom Loredo to Everyone:
+	Another term for "heuristic model" is "phenomenological model." "Empirical model" is also sometimes used. Wikipedia has a helpful discussion of the terms here:
+	
+	Empirical relationship - Wikipedia 
+	
+	"A phenomenological model is a scientific model derived from empirical relationships. It forgoes any attempt to explain why its variables interact the way they do, and simply attempts to describe how they relate, with the assumption that the relationship extends, at least within an acceptable error margin, past the measured values...."
+	Anaya Valluvan:👍
+	
+2026-06-02 17:05:19 From Lee Goins to Everyone:
+	How does Quantum machine learning impact model accuracy inside astrophysics?
+	
+2026-06-02 17:06:04 From Tom Loredo to Everyone:
+	The Schecter function, as astronomers use it, actually isn't a gamma distribution. Astronomers use it with parameter values that are illegal (lead to non-normalizable distributions). Astronomers are implicitly truncating it, typically via some detection efficiency or selection function.
+	Anaya Valluvan:👍
+	
+2026-06-02 17:06:59 From Tom Loredo to Everyone:
+	Shameless self promotion: I came up with a normalizable generalization of the Schecter function, described here:
+	
+	The Break-by-one Gamma Distribution: A Proper and Tractable Alternative to the Schechter Function for Modeling Cosmic Populations - Science Explorer Abstract
+	Anaya Valluvan:👍
+	Pawan Kapur:🫡
+	
+2026-06-02 17:09:49 From Anaya Valluvan to Everyone:
+	Replying to "Shameless self promotion: I came up with a normali...":
+	Thank you for these inputs
+	
+2026-06-02 17:13:59 From Tom Loredo to Everyone:
+	I think George is breaking the full data model into a physical signal model, and a measurement model (as is often done explicitly in state space models), and he's asking if there's a way to distinguish model misspecification of the signal model from misspecification of the measurement model. Sounds like a tough problem to me, essentially nonidentifiable (stat term for what we astronomers call "degenerate").
+	
+	If you feel secure about one or the other component, you could try to account for misspecification in the other component. This is done in the computer model emulation literature, for example, where they assume their measurement model is sound (e.g., additive Gaussian noise), but they don't fully trust their computational physical model. They try to handle misspecification by introducing a controlled "discrepancy function" term into the full model, interpreted as a fix to the computer model. This technology has been used in cosmology.
+	George Moellenbrock-NRAO:👍
+	
+2026-06-02 17:18:52 From George Moellenbrock-NRAO to Everyone:
+	Is “AI” (especially as applied to astrophysics problems) the ultimate in UNsupervised learning?
+	
+2026-06-02 17:19:20 From Hyungsuk Tak to Everyone:
+	Statistical modeling often starts with the assumption that the data are randomly generated (or sampled) from a population, meaning that we might obtain a different sample if we repeated the sampling procedure. The potential variability arising from obtaining a random sample from the population of interest is described by the sampling distribution of the quantity of interest. Then, what is the random mechanism that might have generated the current data set? A measurement error model (assumption) based on parametric distributions, such as the Gaussian distribution, as emphasized in the inference class, is an effort to describe that unknown random mechanism and thereby propagate the sampling variability in the data to the uncertainty in a quantity of interest.
+	
+2026-06-02 17:24:43 From Tom Loredo to Everyone:
+	Re: Using finite mixture models to identify clusters (as opposed to estimating a complex, possibly multimodal PDF), the literature encourages caution. Even modest misspecification of the exact distribution for each cluster's shape compromises reliability of learning the number of clusters. Here is one of the papers addressing this:
+	
+	Finite mixture models do not reliably learn the number of components
+	
+2026-06-02 17:26:22 From Marios Kalomenopoulos to Everyone:
+	Would it be possible to also collect some of the references Eric mentioned on the caveats of k-means, "Friends of friends" etc in Slack?
+	George Moellenbrock-NRAO:👍
+	
+2026-06-02 17:27:08 From Marios Kalomenopoulos to Everyone:
+	Replying to "Would it be possible to also collect some of the r...":
+	Thank you! :)
+	
+2026-06-02 17:27:45 From Hyungsuk Tak to Everyone:
+	Replying to "Is “AI” (especially as applied to astrophysics pro...":
+	We may brand most unsupervised learning methods as “AI” (or data science) methods in the sense that they are essentially learning mechanisms derived from data, such as K-means, PCA, etc. In my opinion, these classical unsupervised learning methods still have their place in the era of AI/ML, as they are very well understood and often serve as the foundation for more complex methods.
+	
+2026-06-02 17:29:13 From Tom Loredo to Everyone:
+	Replying to "Is “AI” (especially as applied to astrophysics pro...":
+	As someone who, as an undergrad, started out in CS and studying AI, I hate the modern use of "AI"—it's so broad that it's almost meaningless. Beginning about 15 yr ago, it began to include even basic ML. So asking, is AI unsupervised learning, is like asking, is ML and everything else called AI unspervised learning. Of course, the answer is no; that's too broad.
+	
+	Deep learning (machine learning with deep neural networks) is used for both supervised and unsupervised learning tasks. So even restricting "AI" to focus on DL, there is both supervised and unsupervised AI.
+	
+2026-06-02 17:32:08 From Tom Loredo to Everyone:
+	Replying to "Is “AI” (especially as applied to astrophysics pro...":
+	If you are asking about LLMs, they use a combination of supervised and unsupervised techniques. E.g., the models initially work in a self-supervised (sort of unsupervised) way to find patterns in language. But then they are further tuned (e.g., using reinforcement learning) in a way that involves a level of supervision.
+	George Moellenbrock-NRAO:👍
+	
+2026-06-02 17:34:15 From George Moellenbrock-NRAO to Everyone:
+	Replying to "Statistical modeling often starts with the assumpt...":
+	My intuition on this topic is that the stochasticity of measurements in a sample arises from finiteness in our ability to make measurements.  I.e., they are not perfectly precise.   Part of my verbal question was that some of the stochasticity may arise from distributions inherent in the ‘objects’ being observed—distributions with properties we can include in our estimations.   I’m finding the distinction between these is less clear than I had assumed......
+	
+2026-06-02 17:36:54 From Tom Loredo to Everyone:
+	Re: Eric's remarks that some machine learning is (or should be) just regression (perhaps unusually complex or advanced), "learning" in machine learning is essentially the same thing as "fitting" in statistics. But calling it "learning" makes it seem much more profound! 😀
+	Anaya Valluvan:👍
+	
+2026-06-02 17:41:54 From Tom Loredo to Everyone:
+	Full article: The ASA Statement on p-Values: Context, Process, and Purpose
+	Pawan Kapur:😯
+	
+2026-06-02 17:42:49 From Tom Loredo to Everyone:
+	Alas, even Nobel prize winning papers in astronomy misuse p-values in ways that significantly overstate the evidence in the data for a new discovery. One day this is going to bite us....
+	
+2026-06-02 17:44:40 From Hyungsuk Tak to Everyone:
+	Replying to "Statistical modeling often starts with the assumpt...":
+	Your intuition is also consistent to my opinion about the sampling distribution caused by our limited ability to collect a finite set of the data. It will be more ideal (and difficult) to incorporate details of the objects, from which we collect the data, into the distributional assumption.
+	
+2026-06-02 17:45:00 From Tom Loredo to Everyone:
+	Here's the ASA's press release with a less technical overview of their p-value statement: American Statistical Association Releases Statement on Statistical Significance and P-Values
+	
+2026-06-02 17:45:22 From Pawan Kapur to Everyone:
+	Its used in Remote Sensing and Earth Observation papers as well... 😯
+	
+2026-06-02 17:49:23 From Tom Loredo to Everyone:
+	Replying to "Statistical modeling often starts with the assumpt...":
+	Some of the sampling distributions in astronomy arise from basic physics, e.g., the Poisson distribution for photon counting, or the relation of SNR to thermal noise as described by the radiometer equation in radio/IR astronomy.
+	Anaya Valluvan:👍
+	
+2026-06-02 17:51:51 From George Moellenbrock-NRAO to Everyone:
+	Replying to "Statistical modeling often starts with the assumpt...":
+	@Tom… Yes, these are the sorts of things I was thinking of that limit the precision of our measurements.
+	
+2026-06-02 17:52:27 From Tom Loredo to Everyone:
+	Eric has mentioned Leo Breiman twice in this Q&A, this time as inventor of random forests. Eric and Jogesh invited Leo to speak at a Statistical Challenges in Modern Astronomy (SCMA) meeting, back around 2000. At that meeting he declared neural networks to be "dead," an abandoned technology replaced by RF and support vector machines (SVMs). Well, even very bright people can be spectacularly wrong! Ironically, around the time he made this claim, a Bayesian neural network had just won a prominent prediction competition.
+	
+2026-06-02 17:55:04 From Lee Goins to Everyone:
+	Thanks
+	
+2026-06-02 17:55:18 From Hyungsuk Tak to Everyone:
+	Thank you Eric!
+	
+2026-06-02 17:55:27 From George Moellenbrock-NRAO to Everyone:
+	Thanks!
+	
+2026-06-02 17:55:29 From Dawid Jankowski to Everyone:
+	Thank you!
+	

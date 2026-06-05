@@ -39,3 +39,9 @@ $$
 - **Small batch sizes:** Large eigenvalue directions of the gradient covariance across the data
 
 **RULE OF THUMB:** learning rate / batch size $\sim$ constant!
+
+
+### Practical implications of DL
+
+1. DL has a lot of moving parts: always keep on logging every change you are making to your DL model.
+2. Scaling up can improve things, but only to a certain extent

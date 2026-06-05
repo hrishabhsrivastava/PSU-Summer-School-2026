@@ -1,0 +1,57 @@
+2026-06-04 10:40:09 From George Moellenbrock-NRAO to Everyone:
+	@Andrew Ferguson : was there a change in the schedule?  Freeman lecture among Thursday videos, but listed on Friday on the pdf schedule.
+	
+2026-06-04 10:42:30 From Tom Loredo to Everyone:
+	Some historians of science argue that it was the rise of spectroscopy in the late 1800s/early 1900s that enabled astronomy to become astrophysics. I wonder what they'll make of the subsequent rise of time-domain astronomy.
+	
+2026-06-04 10:42:59 From Andrew Ferguson to Everyone:
+	Replying to "@Andrew Ferguson : was there a change in the sched...":
+	I've just checked with Tak and I'll send a more sure answer to Slack when I hear back about this. Thanks for pointing this out!
+	George Moellenbrock-NRAO:👍
+	
+2026-06-04 10:50:37 From Tom Loredo to Everyone:
+	The various "transforms" can be introduced ab initio, which is the way that Eric has focused on. But parametric modeling of time series data can lead to taking familiar transforms, but then manipulating them in ways that answer parametric modeling questions.
+	George Moellenbrock-NRAO:👍
+	
+2026-06-04 10:54:25 From Tom Loredo to Everyone:
+	For example, the periodogram (magnitude of the Fourier transform) appears in at least three ways in time series analysis. You can use it as an estimate of the continuous spectrum of a time series. Alternatively, you can consider parametric modeling of periodic signals, with Fourier series; the periodogram arises as the log likelihood for the frequency (or period) if one assumes the signal is a single sinusoid; if there are multiple sinusoids, then the modeling process again directs you to compute the Fourier transform, but manipulates it in a more complex way (not just looking at the squared magnitude). Finally, the periodogram arises in an approximation for the likelihood function for the hyperparameters of a Gaussian process (called the Whittle likelihood).
+	
+2026-06-04 10:59:35 From Tom Loredo to Everyone:
+	I think there is a worthwhile distinction to make between predictive modeling and explanatory modeling. Transforms, and models like ARMA or ARIMA, are mainly tools for predicting the future of a particular time series from the past. Parametric and semiparametric methods become more important when the goal is explanatory—trying to come to some understanding of the system generating the data, which could be useful for predicting future, similar observations, but which could also be tied to other related phenomena and observations.
+	
+	There a very good review article in the journal Statistical Science that addresses this distinction:
+	
+	To Explain or to Predict? (Shmueli 2010)
+	Pawan Kapur:👍
+	
+2026-06-04 11:04:32 From Tom Loredo to Everyone:
+	Re: imputation of missing data, in a Bayesian context, where this is sometimes done probabilistically, it is also called "data augmentation." (Note that this is different from data augmentation in machine learning.) I believe the Harvard/Imperial "CHASC" astrostat group explicitly used data augmentation in some of their work modeling X-ray spectral data from Chanra (I think they used it to handle dead time and pulse pile-up).
+	
+2026-06-04 11:09:36 From George Moellenbrock-NRAO to Everyone:
+	Change point analysis topic was very interesting!
+	
+2026-06-04 11:15:14 From Patrick Talbot to Everyone:
+	For anyone interested in statistical approaches to imputing missing data points, a seminal textbook on this topic is Statistical Analysis with Missing Data by R. Little and D. Rubin. The textbook has some sections covering data points missing due to censoring (which is common in astronomy), a short portion on time series, and also a chapter for complicated mechanisms that result in missing data called missing not at random (MNAR) mechanisms, which I think also come up frequently in astronomy. A growing literature exists on how to properly take into account the effects of missing data and how best to impute these missing values, depending on how the missingness arose statistically. I can post this in the Slack channel as well if people are interested!
+	
+2026-06-04 11:16:36 From George Moellenbrock-NRAO to Everyone:
+	Genome stuff would seem to be dramatically quantized samples….  Exactly 4 states!
+	
+2026-06-04 11:19:33 From Tom Loredo to Everyone:
+	Pre-processing and feature engineering tend to be highly application-specific. An influential paper on feature engineering for ground-based optical astronomy surveys, with the goal of classifying variable stars and transients, is this paper:
+	
+	ON MACHINE-LEARNED CLASSIFICATION OF VARIABLE STARS WITH SPARSE AND NOISY TIME-SERIES DATA - IOPscience 
+	
+	There's a section describing the many features they came up with to inform classifications from photometric time series. The Lomb-Scargle periodogram plays a role.
+	
+	The Rubin LSST survey is pre-computing a large collection of variability features as part of its time series catalogs. There is a list somewhere (and I think they are still accepting suggestions); I can dig it up if of interest.
+	
+2026-06-04 11:20:34 From Tom Loredo to Everyone:
+	Of course, a selling point of deep learning is that it can discover important features on its own. There is some work in astronomy trying to interpret/understand the features that come up in deep learning algorithms, but to my knowledge so far not much has been made of the features (though the classifications and other outputs are valuable).
+	
+2026-06-04 11:23:02 From Pawan Kapur to Everyone:
+	Replying to "Of course, a selling point of deep learning is tha...":
+	Thank you so much for this Prof. Tom. This is very helpful 🫡
+	
+2026-06-04 11:23:47 From Dawid Jankowski to Everyone:
+	Thank you all!
+	
